@@ -124,7 +124,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       children: <Widget>[
                                         Container(
                                           padding: EdgeInsets.only(
-                                              top: 15, left: 20, right: 20),
+                                              top: 0, left: 20, right: 20),
                                           child: Column(
                                             crossAxisAlignment:
                                             CrossAxisAlignment.start,
@@ -192,7 +192,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                         fontFamily:
                                                         "flutterfonts"),
                                                   ),
-                                                  SizedBox(height: 8),
+                                                  SizedBox(height: 4),
                                                   Text(
                                                     (controller.currentWeatherData
                                                         .main !=
@@ -205,6 +205,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                         .copyWith(
                                                         color:
                                                         Colors.redAccent,
+                                                        fontSize: 40,
                                                         fontFamily:
                                                         'flutterfonts'),
                                                   ),
@@ -257,7 +258,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                           .copyWith(
                                                         color:
                                                         Colors.black45,
-                                                        fontSize: 10,
+                                                        fontSize: 15,
                                                         fontWeight:
                                                         FontWeight.bold,
                                                         fontFamily:
@@ -301,10 +302,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                     .textTheme
                                     .caption
                                     .copyWith(
-                                  fontSize: 16,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold,
                                   fontFamily: 'flutterfonts',
                                   color: Color.fromARGB(255, 59, 211, 231),
-                                  fontWeight: FontWeight.bold,
                                 ),
                               ),
                             ),
@@ -413,6 +414,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                         .copyWith(
                                       fontSize: 18,
                                       fontWeight: FontWeight.bold,
+                                      fontFamily: 'flutterfonts',
                                       color: Color.fromARGB(255, 59, 211, 231),
                                     ),
                                   ),
