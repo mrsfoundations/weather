@@ -61,55 +61,39 @@ class _HomeScreenState extends State<HomeScreen> {
                     children: <Widget>[
                       Container(
                         padding: EdgeInsets.only(top: 20,),
-                        child: Row(
-                          children: [
-                            InkWell(
-                              onTap: (){
-                                _key.currentState.openDrawer();
-                              },
-                              child: Container(
-                                child:  Padding(
-                                  padding: const EdgeInsets.all(10.0),
-                                  child: Icon(
-                                    Icons.menu_rounded,
+                        child: Expanded(
+                          child: Container(
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 15.0, right: 15),
+                              child: TextField(
+                                onChanged: (value) => controller.city = value,
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                                textInputAction: TextInputAction.search,
+                                onSubmitted: (value) => controller.updateWeather(),
+                                decoration: InputDecoration(
+                                  suffix: Icon(
+                                    Icons.search,
                                     color: Colors.white,
-                                    size: 40,
+                                  ),
+                                  hintStyle: TextStyle(color: Colors.white),
+                                  hintText: 'Search'.toUpperCase(),
+                                  border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                    borderSide: BorderSide(color: Colors.white),
+                                  ),
+                                  focusedBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(color: Colors.white),
+                                  ),
+                                  enabledBorder: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                    borderSide: BorderSide(color: Colors.white),
                                   ),
                                 ),
                               ),
                             ),
-                            Expanded(
-                              child: Container(
-                                child: TextField(
-                                  onChanged: (value) => controller.city = value,
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                  ),
-                                  textInputAction: TextInputAction.search,
-                                  onSubmitted: (value) => controller.updateWeather(),
-                                  decoration: InputDecoration(
-                                    suffix: Icon(
-                                      Icons.search,
-                                      color: Colors.white,
-                                    ),
-                                    hintStyle: TextStyle(color: Colors.white),
-                                    hintText: 'Search'.toUpperCase(),
-                                    border: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(10),
-                                      borderSide: BorderSide(color: Colors.white),
-                                    ),
-                                    focusedBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(color: Colors.white),
-                                    ),
-                                    enabledBorder: OutlineInputBorder(
-                                      borderRadius: BorderRadius.circular(10),
-                                      borderSide: BorderSide(color: Colors.white),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
+                          ),
                         ),
                       ),
                       Align(
@@ -149,7 +133,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 child: Text(
                                                   (controller.currentWeatherData !=
                                                       null)
-                                                      ? '${controller.currentWeatherData.name}'
+                                                      ? '${controller.currentWeatherData.name ?? ""}'
                                                       .toUpperCase()
                                                       : '',
                                                   style: Theme.of(context)
@@ -396,6 +380,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                               (data != null)
                                                   ? '${data.weather[0].description}'
                                                   : '',
+                                              maxLines: 1,
+                                              overflow: TextOverflow.ellipsis,
                                               style: Theme.of(context)
                                                   .textTheme
                                                   .caption
