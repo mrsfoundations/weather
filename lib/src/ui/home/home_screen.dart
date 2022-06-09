@@ -296,7 +296,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           children: <Widget>[
                             Container(
                               child: Text(
-                                'other city'.toUpperCase(),
+                                'other cities'.toUpperCase(),
                                 style: Theme.of(context)
                                     .textTheme
                                     .caption
@@ -406,7 +406,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 MainAxisAlignment.spaceBetween,
                                 children: <Widget>[
                                   Text(
-                                    'forcast next 5 days'.toUpperCase(),
+                                    'forecast for next 5 days'.toUpperCase(),
                                     style: Theme.of(context)
                                         .textTheme
                                         .caption

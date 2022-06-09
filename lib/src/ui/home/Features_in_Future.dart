@@ -7,12 +7,12 @@ class FirstRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('FEATURES IN FUTURE'),
+        title: const Text('UPCOMING FEATURES'),
       ),
       body:SingleChildScrollView(
           child:Container(
               child:const Text('1)Basic weather map\n'
-                  '2)Historical maps\n'
+                  '2)Geographic map\n'
                   '3)Air Pollution monitor\n'
                   '4)Solar Radiation monitor\n'))),
 

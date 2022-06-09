@@ -11,18 +11,9 @@ class SecondRoute extends StatelessWidget {
       ),
       body:SingleChildScrollView(
        child:Container(
-         child: Text('CONTRIBUTIONS:\n\n'
-                "1)Lokesh's contributions: \n"
-                ' UI designing             - Designing and modifying the user interface \n'
-                'Adding dark theme    	   - Enabling dark theme using get packages \n\n'
-                "2)Narasimman's contributions: \n"
-                ' Designing about page 	   - Describing about the contributions \n'
-                ' Upcoming features    	   - Basic weather map, Historical maps, Air Pollution monitor, Solar Radiation monitor \n'
-                ' Other city data	   - shows current temperature of specified 5 cities \n \n'
-                "3)Dheepan's contributions: \n"
-                ' Developing Home screen   - Fetching weather data from openweathermap using API \n'
-                ' Forecast for next 5 days - shows next 5 days temperature in a graph \n'
-                ' Modifying icons      	   - changing the icons and background. \n',
+         child: Text(
+                "We are flutter developers. \n"
+                ' We created this app to find the temperature and climatic conditions of a particular place.\n',
              style: Theme.of(context)
              .textTheme
              .caption
