@@ -205,7 +205,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                         .copyWith(
                                                         color:
                                                         Colors.redAccent,
-                                                        fontSize: 40,
+                                                        fontSize: 30,
                                                         fontFamily:
                                                         'flutterfonts'),
                                                   ),
@@ -258,7 +258,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                           .copyWith(
                                                         color:
                                                         Colors.black45,
-                                                        fontSize: 15,
+                                                        fontSize: 12,
                                                         fontWeight:
                                                         FontWeight.bold,
                                                         fontFamily:
